@@ -42,7 +42,7 @@ const Footer = () => {
                 to="/menu"
                 className={({ isActive }) => clsx("", { current: isActive })}
               >
-                Home
+                Menu
               </NavLink>
             </li>
             <li>
@@ -63,7 +63,7 @@ const Footer = () => {
             </li>
             <li>
               <NavLink
-                to="/order-online"
+                to="/login"
                 className={({ isActive }) => clsx("", { current: isActive })}
               >
                 Login

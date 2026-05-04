@@ -26,7 +26,7 @@ const Nav = () => {
             to="/menu"
             className={({ isActive }) => clsx("", { current: isActive })}
           >
-            Home
+            Menu
           </NavLink>
         </li>
         <li>
@@ -47,7 +47,7 @@ const Nav = () => {
         </li>
         <li>
           <NavLink
-            to="/order-online"
+            to="/login"
             className={({ isActive }) => clsx("", { current: isActive })}
           >
             Login

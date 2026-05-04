@@ -1,0 +1,40 @@
+.bookings{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.bookings-title{
+  text-align: center;
+  font-weight: 600;
+  font-size: 55px;
+  margin-bottom: 40px;
+}
+
+.bookings-form{
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+}
+
+.bookings-form__button{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.bookings-confirmed{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.bookings-confirmed__container{
+  text-align: center;
+}
+
+.bookings-confirmed__icon{
+  font-size: 50px;
+}
+
+.bookings-confirmed__title{
+  font-size: 50px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,17 @@
+.notfound{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.notfound-container{
+  text-align: center;
+}
+
+.notfound-icon{
+  font-size: 50px;
+}
+
+.notfound-title{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
