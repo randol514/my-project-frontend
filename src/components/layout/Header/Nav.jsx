@@ -1,24 +1,57 @@
+import { NavLink } from "react-router-dom";
+import clsx from "clsx";
+
 const Nav = () => {
   return (
     <nav className="nav-bar">
       <ul>
         <li>
-          <a href="/">Home</a>
+          <NavLink
+            to="/"
+            className={({ isActive }) => clsx("", { current: isActive })}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <a href="/about">About</a>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => clsx("", { current: isActive })}
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <a href="/nenu">Menu</a>
+          <NavLink
+            to="/menu"
+            className={({ isActive }) => clsx("", { current: isActive })}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <a href="/reservations">Reservations</a>
+          <NavLink
+            to="/bookings"
+            className={({ isActive }) => clsx("", { current: isActive })}
+          >
+            Reservations
+          </NavLink>
         </li>
         <li>
-          <a href="/order">Order online</a>
+          <NavLink
+            to="/order-online"
+            className={({ isActive }) => clsx("", { current: isActive })}
+          >
+            Order online
+          </NavLink>
         </li>
         <li>
-          <a href="/login">Login</a>
+          <NavLink
+            to="/order-online"
+            className={({ isActive }) => clsx("", { current: isActive })}
+          >
+            Login
+          </NavLink>
         </li>
       </ul>
     </nav>

@@ -5,12 +5,13 @@ import logo from "../../../assets/logo.svg";
 import { MdDensityMedium } from "react-icons/md";
 
 import "./header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header-container container">
-        <a className="header-logotipo" href="/">
+        <Link className="header-logotipo" to="/">
           <img
             className="header-logotipo__img"
             src={logo}
@@ -18,7 +19,7 @@ const Header = () => {
             width={250}
             height={69}
           />
-        </a>
+        </Link>
         <button className="header-hamburguer" aria-label="Open menu">
           <MdDensityMedium />
         </button>

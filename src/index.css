@@ -8,16 +8,21 @@
   --color-secondary: #F4CE14;
   --color-tertiary: #FFFFFF;
   --color-quaternary: #3333;
-  --color-quinary: #000;
+  --color-quinary: #EE9972;
+  --color-sextary: #f3f1f1;
+
+  --font-primary: "Karla", serif;
+  --font-secondary: "Markazi Text", serif;
 }
 
 body {
   margin: 0;
-  font-family: Karla, sans-serif;
+  font-family: "Karla", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-primary);
   line-height: 1.5;
+  background-color: var(--color-sextary)
 }
 
 a {
@@ -31,9 +36,10 @@ img {
 
 h1, h2, h3 , h4, h5, h6 {
   line-height: 1;
-  font-family: "Karla";
+  font-family: "Markazi Text", serif;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -62,19 +68,17 @@ button{
 }
 
 input, select {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  appearance: none;
   outline: none;
-  height: 50px;
-  padding: 0 20px;
-  border: 1px solid var(--color-primary);
-  border-radius: 0.375rem;
-  background: #FFFFFF;
-  color: var(--color-primary);
-  cursor: pointer;
   transition: all 0.3s;
 }
 
 input:focus, select:focus {
-  border: 1px solid var(--color-primary);
+  border: none;
 }
 
 .container{

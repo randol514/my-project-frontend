@@ -50,6 +50,10 @@
   background-color: var(--color-secondary);
 }
 
+.nav-bar > ul > li > a.current{
+  background-color: var(--color-secondary);
+}
+
 .header-hamburguer{
   font-size: 30px;
   color: var(--color-quinary);

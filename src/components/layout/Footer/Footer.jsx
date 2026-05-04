@@ -3,34 +3,71 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { BsTelephone, BsGeoAlt, BsEnvelope } from "react-icons/bs";
 
 import "./footer.css";
+import { Link, NavLink } from "react-router-dom";
+
+import clsx from "clsx";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container container">
-        <a className="footer-logotipo" href="/">
-          <img src={logo} alt="" className="footer-logotipo__img" />
-        </a>
+        <Link className="footer-logotipo" to="/">
+          <img
+            src={logo}
+            alt="Little Lemon | Authentic Mediterranean Cuisine in Chicago"
+            className="footer-logotipo__img"
+          />
+        </Link>
         <nav className="footer-nav">
           <div className="footer-subtitle">NAVIGATION</div>
           <ul className="footer-nav__list">
             <li>
-              <a href="/">Home</a>
+              <NavLink
+                to="/"
+                className={({ isActive }) => clsx("", { current: isActive })}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <a href="/about">About</a>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => clsx("", { current: isActive })}
+              >
+                About
+              </NavLink>
             </li>
             <li>
-              <a href="/nenu">Menu</a>
+              <NavLink
+                to="/menu"
+                className={({ isActive }) => clsx("", { current: isActive })}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <a href="/reservations">Reservations</a>
+              <NavLink
+                to="/bookings"
+                className={({ isActive }) => clsx("", { current: isActive })}
+              >
+                Reservations
+              </NavLink>
             </li>
             <li>
-              <a href="/order">Order online</a>
+              <NavLink
+                to="/order-online"
+                className={({ isActive }) => clsx("", { current: isActive })}
+              >
+                Order online
+              </NavLink>
             </li>
             <li>
-              <a href="/login">Login</a>
+              <NavLink
+                to="/order-online"
+                className={({ isActive }) => clsx("", { current: isActive })}
+              >
+                Login
+              </NavLink>
             </li>
           </ul>
         </nav>
