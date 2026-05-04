@@ -8,8 +8,10 @@ const Button = ({
   type = "button",
   onClick,
   cls = "",
+  disabled = false,
 }) => {
   const className = `button ${variant} ${cls}`;
+
   if (to) {
     return (
       <Link to={to} className={className}>
@@ -17,8 +19,14 @@ const Button = ({
       </Link>
     );
   }
+
   return (
-    <button type={type} onClick={onClick} className={className}>
+    <button
+      type={type}
+      onClick={onClick}
+      className={className}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

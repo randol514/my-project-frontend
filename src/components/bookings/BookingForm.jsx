@@ -7,11 +7,14 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   const defaultTime = availableTimes[0];
   const defaultOccasions = occasions[0];
   const minimumNumberOfGuests = 1;
+  const today = new Date().toISOString().split("T")[0];
 
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(today);
   const [time, setTime] = useState(defaultTime);
   const [guests, setGuests] = useState(minimumNumberOfGuests);
   const [occasion, setOccasion] = useState(defaultOccasions);
+
+  const [touched, setTouched] = useState({});
 
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
@@ -44,8 +47,10 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
           <input
             type="date"
             id="res-date"
+            min={today}
             value={date}
             onChange={handleDateChange}
+            onBlur={() => setTouched({ ...touched, date: true })}
             required
           />
         </FormField>
@@ -54,6 +59,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             id="res-time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
+            onBlur={() => setTouched({ ...touched, time: true })}
             required
           >
             {availableTimes.map((t) => (
@@ -75,6 +81,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             max="10"
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
+            onBlur={() => setTouched({ ...touched, guests: true })}
             required
           />
         </FormField>

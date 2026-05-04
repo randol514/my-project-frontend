@@ -27,7 +27,7 @@
 }
 
 .form-field__error{
-  font-size: 10px;
+  font-size: 14px;
   color: var(--color-error);
-  margin-top: 4px;
+  margin-top: 3px;
 }
