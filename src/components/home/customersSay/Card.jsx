@@ -5,8 +5,11 @@ const Card = ({ customer }) => {
   return (
     <article className="customer-card">
       <div className="customer-card__rating">
-        {rating.map((star) => (
-          <FaStar key={star} color={star <= 5 ? "#ffc107" : "#e4e5e9"} />
+        {rating.map((star, index) => (
+          <FaStar
+            key={`star-${index}`}
+            color={star <= 5 ? "#f4ce14" : "#e4e5e9"}
+          />
         ))}
       </div>
       <div className="customer-card__details">

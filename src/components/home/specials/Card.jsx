@@ -4,7 +4,7 @@ import { FaMotorcycle } from "react-icons/fa";
 const Card = ({ specials }) => {
   const { image, name, price, description } = specials;
   return (
-    <div className="specials-card">
+    <article className="specials-card">
       <div className="specials-card__image">
         <img src={image} alt={name} className="specials-card__image-img" />
       </div>
@@ -19,7 +19,7 @@ const Card = ({ specials }) => {
           <FaMotorcycle />
         </Link>
       </div>
-    </div>
+    </article>
   );
 };
 

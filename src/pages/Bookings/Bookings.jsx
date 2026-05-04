@@ -28,11 +28,9 @@ const Bookings = () => {
   const navigate = useNavigate();
 
   const submitForm = (formData) => {
-    console.log(formData);
     const success = submitAPI(formData);
     if (success) {
       navigate("/bookings-confirmed");
-      console.log("ok");
     }
   };
 
