@@ -1,4 +1,4 @@
-import logo from "../../../assets/logo-white.png";
+import logo from "assets/logo-white.png";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { BsTelephone, BsGeoAlt, BsEnvelope } from "react-icons/bs";
 

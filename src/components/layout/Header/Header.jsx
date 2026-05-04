@@ -1,6 +1,6 @@
 import Nav from "./Nav";
 
-import logo from "../../../assets/logo.svg";
+import logo from "assets/logo.svg";
 
 import { MdDensityMedium } from "react-icons/md";
 

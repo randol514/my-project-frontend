@@ -2,10 +2,8 @@
 
 Aplicación web desarrollada en React para gestionar reservas de mesa en el restaurante Little Lemon.
 
-## 🚀 Demo
-https://tu-demo-aqui.com
-
 ## 📦 Repositorio
+
 https://github.com/randol514/my-project-frontend
 
 ---
@@ -59,3 +57,4 @@ Clonar el repositorio:
 ```bash
 git clone https://github.com/randol514/my-project-frontend.git
 cd my-project-frontend
+```

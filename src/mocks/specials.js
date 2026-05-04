@@ -1,6 +1,6 @@
-import greekSaladImage from '../assets/greek-salad.jpg'
-import bruschettaImage from '../assets/bruschetta.jpg'
-import lemonDessertImage from '../assets/lemon-dessert.jpg'
+import greekSaladImage from 'assets/greek-salad.jpg'
+import bruschettaImage from 'assets/bruschetta.jpg'
+import lemonDessertImage from 'assets/lemon-dessert.jpg'
 
 export const specials = [
   {

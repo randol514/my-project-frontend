@@ -1,7 +1,7 @@
 import "./chicago.css";
 
-import persons1 from "../../../assets/persons.jpg";
-import persons2 from "../../../assets/persons2.jpg";
+import persons1 from "assets/persons.jpg";
+import persons2 from "assets/persons2.jpg";
 
 const Chicago = () => {
   return (

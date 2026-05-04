@@ -1,7 +1,7 @@
-import customerImage1 from '../assets/customer1.jfif'
-import customerImage2 from '../assets/customer2.jfif'
-import customerImage3 from '../assets/customer3.jfif'
-import customerImage4 from '../assets/customer4.jfif'
+import customerImage1 from 'assets/customer1.jfif'
+import customerImage2 from 'assets/customer2.jfif'
+import customerImage3 from 'assets/customer3.jfif'
+import customerImage4 from 'assets/customer4.jfif'
 
 export const customers = [
   {
