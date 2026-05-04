@@ -29,22 +29,32 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
     submitForm(formData);
   };
 
+  const errors = {
+    date: !date ? "Please select a date" : "",
+    time: !time ? "Please select a time" : "",
+    guests: guests < 1 || guests > 10 ? "Guests must be between 1 and 10" : "",
+  };
+
+  const isFormValid = !errors.date && !errors.time && !errors.guests;
+
   return (
     <form className="bookings-form" onSubmit={handleSubmit}>
       <div className="bookings-form__fields">
-        <FormField label="Choose date" htmlFor="res-date">
+        <FormField label="Choose date" htmlFor="res-date" error={errors.date}>
           <input
             type="date"
             id="res-date"
             value={date}
             onChange={handleDateChange}
+            required
           />
         </FormField>
-        <FormField label="Choose time" htmlFor="res-time">
+        <FormField label="Choose time" htmlFor="res-time" error={errors.time}>
           <select
             id="res-time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
+            required
           >
             {availableTimes.map((t) => (
               <option key={t} value={t}>
@@ -53,7 +63,11 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             ))}
           </select>
         </FormField>
-        <FormField label="Number of guests" htmlFor="res-guests">
+        <FormField
+          label="Number of guests"
+          htmlFor="res-guests"
+          error={errors.guests}
+        >
           <input
             type="number"
             id="res-guests"
@@ -61,9 +75,14 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             max="10"
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
+            required
           />
         </FormField>
-        <FormField label="Occasion" htmlFor="res-occasion">
+        <FormField
+          label="Occasion"
+          htmlFor="res-occasion"
+          error={errors.occasion}
+        >
           <select
             id="res-occasion"
             value={occasion}
@@ -78,7 +97,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
         </FormField>
       </div>
       <div className="bookings-form__button">
-        <Button variant="secondary" type="submit">
+        <Button variant="secondary" type="submit" disabled={!isFormValid}>
           Make Your Reservation
         </Button>
       </div>

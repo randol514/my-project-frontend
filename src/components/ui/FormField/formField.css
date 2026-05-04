@@ -25,3 +25,9 @@
 .form-field label{
   font-weight: 600;
 }
+
+.form-field__error{
+  font-size: 10px;
+  color: var(--color-error);
+  margin-top: 4px;
+}
